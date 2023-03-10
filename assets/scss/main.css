@@ -18699,6 +18699,10 @@ h6 {
 }
 .header__nav--center a {
   margin: 0 2rem;
+  transition: all 0.2s;
+}
+.header__nav--center a:hover {
+  color: var(--color-gray);
 }
 .header__nav--right {
   display: flex;
@@ -18860,6 +18864,12 @@ h6 {
   text-transform: uppercase;
   margin-bottom: 4.2rem;
 }
+.cta__slide:hover .cta__slide--bottom h6 {
+  color: var(--color-gray);
+}
+.cta__slide:hover .cta__slide--bottom p {
+  color: var(--color-gray);
+}
 .cta__slide--top {
   height: 41rem;
   position: relative;
@@ -18892,6 +18902,7 @@ h6 {
   line-height: 168%;
   letter-spacing: 0.16em;
   margin-bottom: 0.8rem;
+  transition: all 0.2s;
 }
 .cta__slide--bottom span {
   display: block;
@@ -18901,12 +18912,18 @@ h6 {
   font-size: 1.2rem;
   line-height: 168%;
   letter-spacing: 0.16em;
+  transition: all 0.2s;
 }
 .cta__slider__container {
   position: relative;
+  background-color: transparent;
 }
 .cta__slider__controllers {
   border: none;
+  background-color: transparent;
+}
+.cta__slider__controllers::after {
+  color: var(--color-black) !important;
 }
 
 @media (max-width: 1020px) {
@@ -18917,5 +18934,125 @@ h6 {
 @media (max-width: 600px) {
   .cta__slide--top {
     height: 20.9rem;
+  }
+  .cta__slider__controllers::after {
+    font-size: 30px !important;
+  }
+}
+.footer {
+  padding: 8rem 15.5rem 2.4rem;
+  background-color: var(--color-gray-light);
+  text-align: left;
+  position: relative;
+  overflow: hidden;
+}
+.footer::before {
+  font-family: "OpenSansSemiBold";
+  font-size: 20rem;
+  content: "A / F";
+  position: absolute;
+  top: 10rem;
+  left: -2rem;
+  color: var(--color-white);
+  z-index: 1;
+}
+.footer h6 {
+  font-family: "WorkSansRegular";
+  font-size: 1.2rem;
+  line-height: 1.4rem;
+  text-transform: uppercase;
+  color: var(--color-black);
+  margin-bottom: 3rem;
+}
+.footer--left {
+  padding-right: 15rem;
+}
+.footer--left label {
+  display: block;
+  font-family: "OpenSansRegular";
+  font-size: 1.4rem;
+  color: var(--color-gray);
+}
+.footer--left input {
+  width: 100%;
+  padding: 0.8rem 0;
+  border: none;
+  border-bottom: 0.1rem solid #c4c4c4;
+  background-color: transparent;
+  margin-bottom: 3rem;
+  transition: all 0.2s;
+}
+.footer--left input:focus {
+  border-bottom-color: var(--color-black);
+}
+.footer--left img {
+  margin-right: 2rem;
+}
+.footer--right {
+  padding-right: 7rem;
+}
+.footer--right__container {
+  display: flex;
+  justify-content: space-between;
+}
+.footer--right li {
+  margin-bottom: 1.2rem;
+}
+.footer--right a {
+  font-size: 1.4rem;
+  line-height: 167.5%;
+  color: var(--color-gray);
+  transition: all 0.2s;
+}
+.footer--right a:hover {
+  color: var(--color-black);
+}
+.footer--top {
+  padding-bottom: 7rem;
+  position: relative;
+  z-index: 2;
+}
+.footer--bottom {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  position: relative;
+  z-index: 2;
+}
+.footer--bottom a {
+  font-family: "OpenSansLight";
+  font-size: 1.2rem;
+  line-height: 167.5%;
+  text-align: center;
+  color: #c4c4c4;
+  transition: all 0.2s;
+}
+.footer--bottom a:hover {
+  color: var(--color-black);
+}
+
+@media (max-width: 992px) {
+  .footer::before {
+    text-align: center;
+    width: 100%;
+    font-size: 12.5rem;
+    top: initial;
+    bottom: -2rem;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+}
+@media (max-width: 800px) {
+  .footer {
+    padding: 4rem 1.6rem 1.6rem;
+  }
+  .footer--left {
+    padding-right: 0;
+    margin-bottom: 4rem;
+  }
+}
+@media (max-width: 600px) {
+  .footer--right__container {
+    flex-direction: column;
   }
 }/*# sourceMappingURL=main.css.map */

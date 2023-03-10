@@ -12,6 +12,14 @@
   }
 
   &__slide {
+    &:hover .cta__slide--bottom h6 {
+      color: var(--color-gray);
+    }
+
+    &:hover .cta__slide--bottom p {
+      color: var(--color-gray);
+    }
+
     &--top {
       height: 41rem;
       position: relative;
@@ -44,6 +52,7 @@
         line-height: 168%;
         letter-spacing: 0.16em;
         margin-bottom: 0.8rem;
+        transition: all 0.2s;
       }
       span {
         display: block;
@@ -53,16 +62,23 @@
         font-size: 1.2rem;
         line-height: 168%;
         letter-spacing: 0.16em;
+        transition: all 0.2s;
       }
     }
   }
 
   &__slider__container {
     position: relative;
+    background-color: transparent;
   }
 
   &__slider__controllers {
     border: none;
+    background-color: transparent;
+
+    &::after {
+      color: var(--color-black) !important;
+    }
   }
 }
 
@@ -77,6 +93,12 @@
     &__slide {
       &--top {
         height: 20.9rem;
+      }
+    }
+
+    &__slider__controllers {
+      &::after {
+        font-size: 30px !important;
       }
     }
   }

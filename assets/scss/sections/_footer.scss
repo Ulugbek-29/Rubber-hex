@@ -1,0 +1,130 @@
+.footer {
+  padding: 8rem 15.5rem 2.4rem;
+  background-color: var(--color-gray-light);
+  text-align: left;
+  position: relative;
+  overflow: hidden;
+
+  &::before {
+    font-family: "OpenSansSemiBold";
+    font-size: 20rem;
+    content: "A / F";
+    position: absolute;
+    top: 10rem;
+    left: -2rem;
+    color: var(--color-white);
+    z-index: 1;
+  }
+  h6 {
+    font-family: "WorkSansRegular";
+    font-size: 1.2rem;
+    line-height: 1.4rem;
+    text-transform: uppercase;
+    color: var(--color-black);
+    margin-bottom: 3rem;
+  }
+  &--left {
+    padding-right: 15rem;
+    label {
+      display: block;
+      font-family: "OpenSansRegular";
+      font-size: 1.4rem;
+      color: var(--color-gray);
+    }
+    input {
+      width: 100%;
+      padding: 0.8rem 0;
+      border: none;
+      border-bottom: 0.1rem solid #c4c4c4;
+      background-color: transparent;
+      margin-bottom: 3rem;
+      transition: all 0.2s;
+
+      &:focus {
+        border-bottom-color: var(--color-black);
+      }
+    }
+    img {
+      margin-right: 2rem;
+    }
+  }
+  &--right {
+    padding-right: 7rem;
+    &__container {
+      display: flex;
+      justify-content: space-between;
+    }
+    li {
+      margin-bottom: 1.2rem;
+    }
+    a {
+      font-size: 1.4rem;
+      line-height: 167.5%;
+      color: var(--color-gray);
+      transition: all 0.2s;
+
+      &:hover {
+        color: var(--color-black);
+      }
+    }
+  }
+
+  &--top {
+    padding-bottom: 7rem;
+    position: relative;
+    z-index: 2;
+  }
+
+  &--bottom {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    position: relative;
+    z-index: 2;
+
+    & a {
+      font-family: "OpenSansLight";
+      font-size: 1.2rem;
+      line-height: 167.5%;
+      text-align: center;
+      color: #c4c4c4;
+      transition: all 0.2s;
+
+      &:hover {
+        color: var(--color-black);
+      }
+    }
+  }
+}
+
+@media (max-width: 992px) {
+  .footer {
+    &::before {
+      text-align: center;
+      width: 100%;
+      font-size: 12.5rem;
+      top: initial;
+      bottom: -2rem;
+      left: 50%;
+      transform: translateX(-50%);
+    }
+  }
+}
+
+@media (max-width: $size-tablet) {
+  .footer {
+    padding: 4rem 1.6rem 1.6rem;
+    &--left {
+      padding-right: 0;
+      margin-bottom: 4rem;
+    }
+  }
+}
+
+@media (max-width: $size-mobile) {
+  .footer {
+    &--right__container {
+      flex-direction: column;
+    }
+  }
+}
