@@ -18734,4 +18734,116 @@ h6 {
     justify-content: space-between;
     align-items: center;
   }
+}
+.about {
+  color: var(--color-white);
+  background-color: var(--color-black);
+  padding: 5.5rem 4rem 8rem;
+  text-align: left;
+  position: relative;
+  overflow-x: hidden;
+}
+.about__container {
+  position: relative;
+  z-index: 2;
+}
+.about__container--top {
+  font-family: "OpenSansRegular";
+}
+.about__container--top h1 {
+  font-size: 2.8rem;
+  margin-bottom: 12.6rem;
+  text-transform: uppercase;
+}
+.about__container--top p {
+  font-size: 1.4rem;
+  line-height: 167.5%;
+}
+.about__container--top p:first-of-type {
+  margin-bottom: 8rem;
+}
+.about__container--top__figure img {
+  height: 100%;
+  width: 100%;
+  transform: translateX(4rem);
+}
+.about__container--center {
+  font-size: 1.6rem;
+}
+.about__container--center--right {
+  padding: 12.3rem 10.5rem;
+}
+.about__container--center p {
+  font-family: "OpenSansRegular";
+  margin-bottom: 2.5rem;
+}
+.about__container--center ul {
+  font-family: "OpenSansBold";
+  line-height: 167.5%;
+}
+.about__container--center li {
+  margin-bottom: 1.6rem;
+  margin-left: 1.5rem;
+  position: relative;
+}
+.about__container--center li::before {
+  content: "/";
+  color: var(--color-gold);
+  position: absolute;
+  top: 0;
+  left: -1.5rem;
+}
+.about__container--center__figure img {
+  height: 100%;
+  width: 100%;
+}
+.about__container--bottom h2 {
+  font-family: "OpenSansBold";
+  font-size: 4rem;
+  line-height: 143%;
+  text-transform: uppercase;
+  letter-spacing: 0.18em;
+}
+.about__container--bottom__figure img {
+  height: 100%;
+  width: 100%;
+}
+.about__lines {
+  top: 0;
+  left: 0;
+  position: absolute;
+  display: flex;
+  z-index: 1;
+  height: 100%;
+  width: 100%;
+}
+.about__lines__item {
+  height: 100%;
+  width: 100%;
+}
+.about__lines__item:not(:last-child) {
+  border-right: 1px solid #292825;
+}
+
+@media (max-width: 992px) {
+  .about__lines {
+    display: none;
+  }
+}
+@media (max-width: 800px) {
+  .about {
+    padding: 4.5rem 1.6rem 5.5rem;
+  }
+  .about__container--center--right {
+    padding: 2.4rem 1.7rem;
+  }
+  .about__container--center {
+    font-size: 1.4rem;
+  }
+  .about__container--center ul {
+    font-family: "OpenSansRegular";
+  }
+  .about__container--bottom h2 {
+    font-size: 2.8rem;
+  }
 }/*# sourceMappingURL=main.css.map */

@@ -1,0 +1,135 @@
+.about {
+  color: var(--color-white);
+  background-color: var(--color-black);
+  padding: 5.5rem 4rem 8rem;
+  text-align: left;
+  position: relative;
+  overflow-x: hidden;
+  &__container {
+    position: relative;
+    z-index: 2;
+    &--top {
+      font-family: "OpenSansRegular";
+      h1 {
+        font-size: 2.8rem;
+        margin-bottom: 12.6rem;
+        text-transform: uppercase;
+      }
+      p {
+        font-size: 1.4rem;
+        line-height: 167.5%;
+        &:first-of-type {
+          margin-bottom: 8rem;
+        }
+      }
+
+      &__figure {
+        img {
+          height: 100%;
+          width: 100%;
+          transform: translateX(4rem);
+        }
+      }
+    }
+
+    &--center {
+      font-size: 1.6rem;
+      &--right {
+        padding: 12.3rem 10.5rem;
+      }
+      p {
+        font-family: "OpenSansRegular";
+        margin-bottom: 2.5rem;
+      }
+
+      ul {
+        font-family: "OpenSansBold";
+        line-height: 167.5%;
+      }
+
+      li {
+        margin-bottom: 1.6rem;
+        margin-left: 1.5rem;
+        position: relative;
+        &::before {
+          content: "/";
+          color: var(--color-gold);
+          position: absolute;
+          top: 0;
+          left: -1.5rem;
+        }
+      }
+
+      &__figure {
+        img {
+          height: 100%;
+          width: 100%;
+        }
+      }
+    }
+
+    &--bottom {
+      h2 {
+        font-family: "OpenSansBold";
+        font-size: 4rem;
+        line-height: 143%;
+        text-transform: uppercase;
+        letter-spacing: 0.18em;
+      }
+
+      &__figure {
+        img {
+          height: 100%;
+          width: 100%;
+        }
+      }
+    }
+  }
+
+  &__lines {
+    top: 0;
+    left: 0;
+    position: absolute;
+    display: flex;
+    z-index: 1;
+    height: 100%;
+    width: 100%;
+    &__item {
+      height: 100%;
+      width: 100%;
+      &:not(:last-child) {
+        border-right: 1px solid #292825;
+      }
+    }
+  }
+}
+
+@media (max-width: 992px) {
+  .about {
+    &__lines {
+      display: none;
+    }
+  }
+}
+
+@media (max-width: $size-tablet) {
+  .about {
+    padding: 4.5rem 1.6rem 5.5rem;
+
+    &__container--center--right {
+      padding: 2.4rem 1.7rem;
+    }
+    &__container--center {
+      font-size: 1.4rem;
+
+      & ul {
+        font-family: "OpenSansRegular";
+      }
+    }
+    &__container--bottom {
+      h2 {
+        font-size: 2.8rem;
+      }
+    }
+  }
+}
