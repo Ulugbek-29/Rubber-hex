@@ -1,0 +1,62 @@
+$font-oswald: (
+  ("ExtraLight", 200),
+  ("Light", 300),
+  ("Regular", 400),
+  ("Medium", 500),
+  ("SemiBold", 600),
+  ("Bold", 700)
+);
+
+$font-work-sans: (
+  ("Thin", 100),
+  ("ExtraLight", 200),
+  ("Light", 300),
+  ("Regular", 400),
+  ("Medium", 500),
+  ("SemiBold", 600)
+);
+
+$font-open-sans: (
+  ("Light", 300),
+  ("Regular", 400),
+  ("Medium", 500),
+  ("SemiBold", 600),
+  ("Bold", 700),
+  ("ExtraBold", 800)
+);
+
+@each $name, $weight in $font-oswald {
+  $url: "../fonts/Oswald/Oswald-" + $name;
+  $font-family: "Oswald" + $name;
+  @font-face {
+    font-family: $font-family;
+    src: url($url + ".ttf");
+    font-style: normal;
+    font-weight: $weight;
+    font-display: swap;
+  }
+}
+
+@each $name, $weight in $font-work-sans {
+  $url: "../fonts/WorkSans/WorkSans-" + $name;
+  $font-family: "WorkSans" + $name;
+  @font-face {
+    font-family: $font-family;
+    src: url($url + ".ttf");
+    font-style: normal;
+    font-weight: $weight;
+    font-display: swap;
+  }
+}
+
+@each $name, $weight in $font-open-sans {
+  $url: "../fonts/OpenSans/OpenSans-" + $name;
+  $font-family: "OpenSans" + $name;
+  @font-face {
+    font-family: $font-family;
+    src: url($url + ".ttf");
+    font-style: normal;
+    font-weight: $weight;
+    font-display: swap;
+  }
+}

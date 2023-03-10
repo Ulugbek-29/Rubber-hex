@@ -1,0 +1,31 @@
+.container-fluid {
+  width: 100%;
+}
+
+.row {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0 -15px;
+}
+
+.col {
+  padding: 0 15px;
+}
+
+@mixin grid($media: false) {
+  @for $i from 1 through 12 {
+    @if $media {
+      .col-#{$media}-#{$i} {
+        flex: 0 0 ($i * 100% / 12);
+        padding: 0 15px;
+      }
+    } @else {
+      .col-#{$i} {
+        flex: 0 0 ($i * 100% / 12);
+        padding: 0 15px;
+      }
+    }
+  }
+}
+
+@include grid();
