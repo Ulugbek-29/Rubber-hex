@@ -1,0 +1,24 @@
+{
+  "name": "rubber-hex",
+  "version": "1.0.0",
+  "description": "Rubber hex",
+  "main": "index.js",
+  "scripts": {
+    "start": "parcel index.html",
+    "build": "parcel build index.html --dist-dir ./dist"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Ulugbek-29/Rubber-hex.git"
+  },
+  "author": "Ulugbek Tursunaliev",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Ulugbek-29/Rubber-hex/issues"
+  },
+  "homepage": "https://github.com/Ulugbek-29/Rubber-hex#readme",
+  "devDependencies": {
+    "parcel": "^2.8.3",
+    "sass": "^1.58.3"
+  }
+}
