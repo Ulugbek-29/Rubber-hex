@@ -18846,4 +18846,76 @@ h6 {
   .about__container--bottom h2 {
     font-size: 2.8rem;
   }
+}
+.cta {
+  color: var(--color-black);
+  text-align: left;
+  padding: 8rem 4rem 9.4rem;
+}
+.cta h2 {
+  font-family: "OpenSansRegular";
+  font-size: 2.8rem;
+  line-height: 130%;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  margin-bottom: 4.2rem;
+}
+.cta__slide--top {
+  height: 41rem;
+  position: relative;
+}
+.cta__slide--top img {
+  background-color: var(--color-gray-light);
+  -o-object-fit: cover;
+     object-fit: cover;
+  height: 100%;
+  width: 100%;
+}
+.cta__slide--top figcaption {
+  font-family: "OpenSansRegular";
+  padding: 0.5rem;
+  font-size: 1.2rem;
+  line-height: 167.5%;
+  text-align: center;
+  background-color: var(--color-white);
+  position: absolute;
+  top: 0.8rem;
+  left: 0.8rem;
+}
+.cta__slide--bottom {
+  font-family: "OswaldLight";
+  padding: 0.8rem 0;
+}
+.cta__slide--bottom h6 {
+  text-transform: uppercase;
+  font-size: 1.2rem;
+  line-height: 168%;
+  letter-spacing: 0.16em;
+  margin-bottom: 0.8rem;
+}
+.cta__slide--bottom span {
+  display: block;
+  margin-bottom: 0.8rem;
+}
+.cta__slide--bottom p {
+  font-size: 1.2rem;
+  line-height: 168%;
+  letter-spacing: 0.16em;
+}
+.cta__slider__container {
+  position: relative;
+}
+.cta__slider__controllers {
+  border: none;
+}
+
+@media (max-width: 1020px) {
+  .cta {
+    padding: 4rem 1.6rem;
+  }
+}
+@media (max-width: 600px) {
+  .cta__slide--top {
+    height: 20.9rem;
+  }
 }/*# sourceMappingURL=main.css.map */
